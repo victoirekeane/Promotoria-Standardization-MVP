@@ -32,4 +32,16 @@ view: sku_manager_skudatapoint {
     type: count
     drill_fields: [id]
   }
+
+  measure: average {
+    type:  average
+    value_format:"$#.00;($#.00)"
+    sql: ${value} :: float;;
+  }
+
+  measure: sum {
+    type:  sum
+    value_format:"#;(#)"
+    sql: ${value} :: float;;
+  }
 }
