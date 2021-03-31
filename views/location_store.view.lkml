@@ -49,13 +49,19 @@ view: location_store {
   }
 
   dimension: latitude {
-    type: string
-    sql: ${TABLE}."latitude" ;;
+    type: number
+    sql: CAST(${TABLE}."latitude" as FLOAT);;
   }
 
   dimension: longitude {
-    type: string
-    sql: ${TABLE}."longitude" ;;
+    type: number
+    sql: CAST(${TABLE}."longitude" as FLOAT);;
+  }
+
+  dimension: store_location {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
   }
 
   dimension: map_url {
