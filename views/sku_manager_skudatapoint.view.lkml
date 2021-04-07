@@ -35,7 +35,7 @@ view: sku_manager_skudatapoint {
 
   measure: average {
     type:  average
-    value_format:"$#.00;($#.00)"
+    value_format:"#.00;(#.00)"
     sql: ${value} :: float;;
   }
 
