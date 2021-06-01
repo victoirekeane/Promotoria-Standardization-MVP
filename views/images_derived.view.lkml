@@ -176,7 +176,7 @@ view: images_derived {
           <details>
             <summary>Galeria</summary>
                   {% for link in links %}
-                      <a href='#' target="_blank" id={{link}}>link</a>
+                      <a href='#' target="_blank" id={{link}}>link </a>
                 {% endfor %}
           </details>          ;;
   }
