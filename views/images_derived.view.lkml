@@ -150,7 +150,7 @@ view: images_derived {
   measure: image_gallery_click {
     type: string
     label: "Image Gallery Click"
-    sql:   ${TABLE}."stores_test.name";;
+    sql:   ${TABLE}."stores_test_name";;
     link: {
       label: "Ver"
       url: "{{ link }}&limit=1"
@@ -167,15 +167,15 @@ view: images_derived {
       drill_fields:  [stores_test_name,image_gallery_click]
     }
 
-  dimension: pictures_link_zubale {
-    type: string
-    sql: ${list_of_url};;
-    label: "Image Gallery"
-    link: {
-      label: "Ver"
-      url: "{{ link }}&limit=1"
-    }
-    html:
+    dimension: pictures_link_zubale {
+      type: string
+      sql: ${list_of_url};;
+      link: {
+        label: "Ver"
+        url: "{{ link }}&limit=1"
+      }
+      label: "Image Gallery"
+      html:
         {% assign links = {{value}} | split:'|RECORD|' %}
           <details>
             <summary>Galeria</summary>
@@ -189,8 +189,7 @@ view: images_derived {
                 {% endfor %}
               </ul>
           </details>          ;;
-  }
-
+    }
 
   set: detail {
     fields: [
