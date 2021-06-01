@@ -171,6 +171,10 @@ view: images_derived {
     type: string
     sql: ${list_of_url};;
     label: "Image Gallery"
+    link: {
+      label: "Ver"
+      url: "{{ link }}&limit=1"
+    }
     html:
         {% assign links = {{value}} | split:'|RECORD|' %}
           <details>
