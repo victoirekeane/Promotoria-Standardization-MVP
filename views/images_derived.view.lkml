@@ -150,7 +150,7 @@ view: images_derived {
   measure: image_gallery_click {
     type: string
     label: "Image Gallery Click"
-    sql:   ${TABLE}."name";;
+    sql:   ${TABLE}."stores_test.name";;
     link: {
       label: "Ver"
       url: "{{ link }}&limit=1"
