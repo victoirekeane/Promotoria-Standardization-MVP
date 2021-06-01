@@ -167,23 +167,6 @@ view: images_derived {
       drill_fields:  [stores_test_name,image_gallery_click]
     }
 
-  dimension: pictures_link_zubale {
-    type: string
-    sql: ${stores_test_name};;
-    label: "Image Gallery"
-    link: {
-      label: "Ver"
-      url: "{{ link }}&limit=1"
-    }
-    html:
-        {% assign links = {{value}} %}
-          <details>
-            <summary>Galeria</summary>
-                  {% for link in links %}
-                      <a href='#' target="_blank" id={{link}}>link </a>
-                {% endfor %}
-          </details>          ;;
-  }
 
   set: detail {
     fields: [
