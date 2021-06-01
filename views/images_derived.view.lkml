@@ -172,7 +172,7 @@ view: images_derived {
       sql: ${list_of_url};;
       label: "Image Gallery -->"
       html:
-        <a href="#" target="_self">Test</a> ;;
+        <a href="#" target="_self" id={{list_of_url}}>Test</a> ;;
     }
 
   set: detail {
