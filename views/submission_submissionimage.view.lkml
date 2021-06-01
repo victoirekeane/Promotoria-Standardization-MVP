@@ -75,7 +75,7 @@ view: submission_submissionimage {
                   {% for link in links %}
                   <li>
                     <p>
-                      <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="220" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
+                      <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="100" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
                     </p>
                   </li>
                 {% endfor %}
