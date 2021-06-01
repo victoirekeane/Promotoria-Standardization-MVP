@@ -172,7 +172,7 @@ view: images_derived {
       sql: ${list_of_url};;
       link: {
         label: "Ver"
-        url: "{{ list_of_url }}&limit=1"
+        url: "{{ concat_image_url }}"
       }
       label: "Image Gallery"
       html:
