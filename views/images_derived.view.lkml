@@ -171,6 +171,10 @@ view: images_derived {
     type: string
     sql: ${stores_test_name};;
     label: "Image Gallery"
+    link: {
+      label: "Ver"
+      url: "{{ link }}&limit=1"
+    }
     html:
         {% assign links = {{value}} %}
           <details>
