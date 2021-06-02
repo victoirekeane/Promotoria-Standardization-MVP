@@ -171,10 +171,14 @@ view: images_derived {
     type: string
     sql: ${list_of_url};;
     link: {
-      label: "Galeria"
+      label: "Ver"
       url: "{{ list_of_url }}"
     }
     label: "Image Gallery"
+    html:
+          <details>
+            <summary>Galeria</summary>
+          </details>          ;;
   }
 
   set: detail {
