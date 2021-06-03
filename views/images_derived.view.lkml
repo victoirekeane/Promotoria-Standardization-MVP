@@ -170,6 +170,10 @@ view: images_derived {
     dimension: pictures_link_zubale {
       type: string
       sql: ${list_of_url};;
+      link: {
+        label: "Ver"
+        url: "{{ list_of_url }}"
+      }
       label: "Image Gallery"
       html:
         {% assign links = {{value}} | split:'|RECORD|' %}
