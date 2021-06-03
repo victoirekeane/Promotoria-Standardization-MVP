@@ -150,7 +150,7 @@ view: images_derived {
   measure: image_gallery_click {
     type: string
     label: "Image Gallery Click"
-    sql:   ${TABLE}."stores_test.name";;
+    sql:   ${TABLE}."stores_test_name";;
     link: {
       label: "Ver"
       url: "{{ link }}&limit=1"
@@ -167,41 +167,47 @@ view: images_derived {
       drill_fields:  [stores_test_name,image_gallery_click]
     }
 
-  dimension: pictures_link_zubale {
-    type: string
-    sql: ${list_of_url};;
-    link: {
-      label: "Ver"
-      url: "{{ list_of_url }}"
-    }
-    label: "Image Gallery"
-    html:
+    dimension: pictures_link_zubale {
+      type: string
+      sql: ${list_of_url};;
+      label: "Image Gallery"
+      html:
+        {% assign links = {{value}} | split:'|RECORD|' %}
           <details>
             <summary>Galeria</summary>
+              <ul>
+                  {% for link in links %}
+                  <li>
+                    <p>
+                      <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="220" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
+                    </p>
+                  </li>
+                {% endfor %}
+              </ul>
           </details>          ;;
-  }
+    }
 
-  set: detail {
-    fields: [
-      stores_test_id,
-      responses_created_date,
-      stores_test_state,
-      stores_test_city,
-      retail_name,
-      stores_test_name,
-      retail_company_id,
-      submission_brand_id,
-      anaqueles_value,
-      caducadas_value,
-      cajas_value,
-      captura_value,
-      disponibilidad_value,
-      especifica_value,
-      frentes_value,
-      precio_value,
-      responses_name_string,
-      sku_value,
-      list_of_url
-    ]
+    set: detail {
+      fields: [
+        stores_test_id,
+        responses_created_date,
+        stores_test_state,
+        stores_test_city,
+        retail_name,
+        stores_test_name,
+        retail_company_id,
+        submission_brand_id,
+        anaqueles_value,
+        caducadas_value,
+        cajas_value,
+        captura_value,
+        disponibilidad_value,
+        especifica_value,
+        frentes_value,
+        precio_value,
+        responses_name_string,
+        sku_value,
+        list_of_url
+      ]
+    }
   }
-}
