@@ -175,20 +175,7 @@ view: images_derived {
         url: "{{ list_of_url }}"
       }
       label: "Image Gallery"
-      html:
-        {% assign links = {{value}} | split:'|RECORD|' %}
-          <details>
-            <summary>Galeria</summary>
-              <ul>
-                  {% for link in links %}
-                  <li>
-                    <p>
-                      <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="220" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
-                    </p>
-                  </li>
-                {% endfor %}
-              </ul>
-          </details>          ;;
+
     }
 
     set: detail {
