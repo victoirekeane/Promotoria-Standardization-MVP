@@ -189,13 +189,8 @@ view: images_derived {
     }
     label: "Image Gallery"
     html:
-        {% assign links = {{value}} | split:'|RECORD|' %}
             <summary>Galeria</summary>
-            <table>
-                {% tablerow link in links cols:3 %}
-                      <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="220" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
-                {% endtablerow %}
-            </table>        ;;
+                   ;;
   }
 
 #   <table>
