@@ -189,8 +189,11 @@ view: images_derived {
     }
     label: "Image Gallery"
     html:
+        {% assign links = {{value}} | split:'|RECORD|' %}
             <summary>Galeria</summary>
-                   ;;
+            <table>
+
+            </table>        ;;
   }
 
 #   <table>
