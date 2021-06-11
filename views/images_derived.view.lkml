@@ -180,11 +180,7 @@ view: images_derived {
       {% assign links = {{value}} %}
 
       <summary>Galeria</summary>
-      <ul>
-      {% for link in links %}
 
-      {% endfor %}
-      </ul>
                ;;
 
     }
