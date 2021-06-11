@@ -177,15 +177,15 @@ view: images_derived {
       }
       label: "Image Gallery"
       html:
-      {% assign links = {{value}} | split:'|RECORD|' %}
-      <details>
+      {% assign links = {{value}} %}
+
       <summary>Galeria</summary>
       <ul>
       {% for link in links %}
 
       {% endfor %}
       </ul>
-      </details>          ;;
+               ;;
 
     }
 
