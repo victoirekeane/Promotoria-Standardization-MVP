@@ -143,30 +143,30 @@ view: images_derived {
     sql: ${TABLE}."list_of_url" ;;
   }
 
-  dimension: concat_image_url {
-    type: string
-    sql: CONCAT('http://jobs.zubale.com//aws/',${TABLE}."list_of_url") ;;
-  }
+  # dimension: concat_image_url {
+  #   type: string
+  #   sql: CONCAT('http://jobs.zubale.com//aws/',${TABLE}."list_of_url") ;;
+  # }
 
-  measure: image_gallery_click {
-    type: string
-    label: "Image Gallery Click"
-    sql:   ${TABLE}."stores_test_name";;
-    link: {
-      label: "Ver"
-      url: "{{ link }}&limit=1"
-    }
-    html:
-          {% assign results_sql = {{value}} %}
-          {% for stores_test_name in results_sql %}
-          <p>
-          <a href={{link}} target="_blank">Ver Fotos
-          </a>
-          </p>
-          {% endfor %};;
-          # drill_fields:  [store_store_number,store_name, latest_created_date,pictures_link]
-      drill_fields:  [stores_test_name,image_gallery_click]
-    }
+  # measure: image_gallery_click {
+  #   type: string
+  #   label: "Image Gallery Click"
+  #   sql:   ${TABLE}."stores_test_name";;
+  #   link: {
+  #     label: "Ver"
+  #     url: "{{ link }}&limit=1"
+  #   }
+  #   html:
+  #         {% assign results_sql = {{value}} %}
+  #         {% for stores_test_name in results_sql %}
+  #         <p>
+  #         <a href={{link}} target="_blank">Ver Fotos
+  #         </a>
+  #         </p>
+  #         {% endfor %};;
+  #         # drill_fields:  [store_store_number,store_name, latest_created_date,pictures_link]
+  #     drill_fields:  [stores_test_name,image_gallery_click]
+  #   }
 
     dimension: pictures_link_zubale {
       type: string
