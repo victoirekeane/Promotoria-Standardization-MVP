@@ -186,23 +186,23 @@ view: images_derived {
     }
 
 
-  dimension: pictures_link_zubale_liquid {
-    type: string
-    sql: ${list_of_url};;
-    link: {
-      label: "Ver"
-      url: "{{ list_of_url }}"
-    }
-    label: "Image Gallery"
-    html:
-        {% assign links = {{value}} | split:'|RECORD|' %}
-            <summary>Galeria</summary>
-            <table>
-                {% tablerow link in links cols:3 %}
-                      <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="220" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
-                {% endtablerow %}
-            </table>        ;;
-  }
+  # dimension: pictures_link_zubale_liquid {
+  #   type: string
+  #   sql: ${list_of_url};;
+  #   link: {
+  #     label: "Ver"
+  #     url: "{{ list_of_url }}"
+  #   }
+  #   label: "Image Gallery"
+  #   html:
+  #       {% assign links = {{value}} | split:'|RECORD|' %}
+  #           <summary>Galeria</summary>
+  #           <table>
+  #               {% tablerow link in links cols:3 %}
+  #                     <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="220" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
+  #               {% endtablerow %}
+  #           </table>        ;;
+  # }
 
 #   <table>
 # {% tablerow product in collection.products %}
