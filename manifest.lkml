@@ -2,7 +2,7 @@ project_name: "promotoria_standard_mvp"
 
 application: promotoria_standard_mvp {
   label: "promotoria standard mvp"
-  url: "http://localhost:8080/bundle.js"
+  url: "http://localhost:3000"
   entitlements: {
     local_storage: yes
     navigation: yes
