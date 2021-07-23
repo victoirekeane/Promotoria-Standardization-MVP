@@ -2,7 +2,7 @@ project_name: "promotoria_standard_mvp"
 
 application: promotoria_standard_mvp {
   label: "promotoria standard mvp"
-  url: "bundle.js"
+  file: "bundle.js"
   entitlements: {
     local_storage: no
     navigation: no
