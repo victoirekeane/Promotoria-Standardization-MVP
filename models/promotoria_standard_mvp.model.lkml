@@ -10,13 +10,20 @@ datagroup: promotoria_standard_mvp_default_datagroup {
 
 persist_with: promotoria_standard_mvp_default_datagroup
 
+access_grant: view_deprecated {
+  user_attribute: view_deprecated
+  allowed_values: ["yes"]
+}
+
 explore: products {
+  required_access_grants: [view_deprecated]
   from:  sku_manager_skudata
   sql_always_where: ${id} in (select sku.id from sku_manager_skudata sku, submission_submissionmetadata ss where ss.brand_id = 287 and sku.meta_data_id = ss.id);;
 }
 
 
 explore:  stores_test {
+  required_access_grants: [view_deprecated]
   from: location_store
   sql_always_where: ${stores_test.id} in (select store_id from submission_submissionmetadata ss where ss.brand_id = 287);;
 
@@ -228,10 +235,11 @@ explore:  stores_test {
 
 }
 
-explore: images_derived {}
+explore: images_derived {required_access_grants: [view_deprecated]}
 
 
 explore: share_of_shelf {
+  required_access_grants: [view_deprecated]
   from: submission_submissionmetadata
   sql_always_where: ${share_of_shelf.brand_id} = 287 AND ${approved} ='Yes';;
 

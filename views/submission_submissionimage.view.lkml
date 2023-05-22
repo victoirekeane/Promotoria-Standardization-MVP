@@ -67,20 +67,20 @@ view: submission_submissionimage {
     type: string
     sql: ${url} ;;
     label: "Enlace Zubale"
-    html:
-        {% assign links = {{value}} | split:'|RECORD|' %}
-          <details>
-            <summary>Galeria</summary>
-              <ul>
-                  {% for link in links %}
-                  <li>
-                    <p>
-                      <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="100" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
-                    </p>
-                  </li>
-                {% endfor %}
-              </ul>
-          </details>          ;;
+    # html:
+    #     {% assign links = {{value}} | split:'|RECORD|' %}
+    #       <details>
+    #         <summary>Galeria</summary>
+    #           <ul>
+    #               {% for link in links %}
+    #               <li>
+    #                 <p>
+    #                   <a href='http://jobs.zubale.com//aws/{{link}}' target="_blank"><img height="100" src="http://jobs.zubale.com//aws/{{link}}"></img></a>
+    #                 </p>
+    #               </li>
+    #             {% endfor %}
+    #           </ul>
+    #       </details>          ;;
   }
 
   measure: count {

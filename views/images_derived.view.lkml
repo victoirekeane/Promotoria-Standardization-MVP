@@ -176,12 +176,12 @@ view: images_derived {
         url: "{{ list_of_url }}"
       }
       label: "Image Gallery"
-      html:
-      {% assign links = {{value}} %}
+      # html:
+      # {% assign links = {{value}} %}
 
-      <summary>Galeria</summary>
+      # <summary>Galeria</summary>
 
-               ;;
+      #         ;;
 
     }
 
